@@ -4,9 +4,7 @@
 
 - **One-liner:** A 2-8 multiplayer hide-and-seek party game where players hide and search for a small mech named Mimi in illustrated scenes and photos.
 - **Purpose:** Provides a lightweight, browser-based social game that lets friends create or join a room, take turns hiding Mimi, and compete to find her quickly.
-- **Status:** finished.
-- **Dates:** started: Early October, 2026.
-- **Repo:** TBD.
+- **Status:** finished. 
 - **Live URL:** https://hidemimi.netlify.app/
 - Note: This project was made for Handshake and OpenAI's "Create a Multiplayer Game" challenge using ChatGPT Work. Majority of the code is written by ChatGPT, with key design decisions made by me. This is by far the most I've relied on AI for a project since that was the purpose of the challenge.
 
