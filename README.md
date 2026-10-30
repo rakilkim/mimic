@@ -43,12 +43,12 @@
 ```mermaid
 %%{init: {"theme": "base", "themeVariables": {"fontSize": "20px", "primaryTextColor": "#ffffff", "lineColor": "#9aa0a6", "edgeLabelBackground": "#30343b", "clusterBkg": "#202124", "clusterBorder": "#9aa0a6"}}}%%
 flowchart LR
-    Browser["<b>Browser client</b><br/>HTML / CSS / JS / SVG"] -->|"GET state<br/>POST action"| Function["<b>Netlify Function</b><br/>game endpoint"]
-    Function --> Service["<b>Shared game service</b><br/>validation · turns · scoring"]
-    Service -->|"Strongly consistent JSON<br/>conditional ETag writes"| Blobs["<b>Netlify Blobs</b><br/>mimic-party-rooms"]
-    Browser -->|"Loads fonts"| Fonts["<b>Google Fonts</b>"]
-    Local["<b>Local Node preview</b><br/>static server"] -->|"Same game route"| Service
-    Local --> LocalStore["<b>In-memory store</b><br/>local rooms"]
+    Browser["<b>Browser client</b><br/>HTML / CSS / JS / SVG"]:::component -->|"GET state<br/>POST action"| Function["<b>Netlify Function</b><br/>game endpoint"]:::component
+    Function --> Service["<b>Shared game service</b><br/>validation · turns · scoring"]:::component
+    Service -->|"Strongly consistent JSON<br/>conditional ETag writes"| Blobs["<b>Netlify Blobs</b><br/>mimic-party-rooms"]:::component
+    Browser -->|"Loads fonts"| Fonts["<b>Google Fonts</b>"]:::component
+    Local["<b>Local Node preview</b><br/>static server"]:::component -->|"Same game route"| Service
+    Local --> LocalStore["<b>In-memory store</b><br/>local rooms"]:::component
     Service -.->|"Local storage"| LocalStore
     classDef component fill:#202124,stroke:#9aa0a6,stroke-width:3px,color:#ffffff;
 ```
